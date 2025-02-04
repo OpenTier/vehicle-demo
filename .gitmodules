@@ -1,0 +1,3 @@
+[submodule "vehicle-cloud-api"]
+	path = vehicle-cloud-api
+	url = git@github.com:OpenTier/vehicle-cloud-api.git

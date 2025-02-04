@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package intra.lock_state;
+
+enum State {
+    UNDEFINED = 0;
+    LOCK = 1;
+    OFF = 2;
+    ACC = 3;
+    ON = 4;
+    START = 5;
+}
+
+message LockState {
+    State state = 1;
+}

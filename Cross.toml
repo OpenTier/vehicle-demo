@@ -1,0 +1,5 @@
+[target.aarch64-unknown-linux-gnu]
+image = "cross-rpi"
+
+[build]
+target = "aarch64-unknown-linux-gnu"

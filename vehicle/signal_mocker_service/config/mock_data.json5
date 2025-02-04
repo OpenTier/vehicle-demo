@@ -1,0 +1,204 @@
+{
+  signal_mocker_service: {
+    messages: {
+      Exterior: {
+        frequency: 10000,
+        signals: {
+          AirTemperature: {
+            data_type: "interpolated",
+            start_value: 21.0,
+            end_value: 23.0,
+            steps: 50,
+            noise_level: 0.01,
+          },
+          Humidity: {
+            data_type: "static",
+            data: [40, 50, 60, 70],
+          },
+          LightIntensity: {
+            data_type: "interpolated",
+            start_value: 300.0,
+            end_value: 1000.0,
+            steps: 25,
+            noise_level: 20.0,
+          },
+        },
+      },
+      BatteryData: {
+        frequency: 5000,
+        signals: {
+          IsCharging: {
+            data_type: "static",
+            data_bool: [false],
+          },
+          IsDischarging: {
+            data_type: "static",
+            data_bool: [true],
+          },
+          TimeToFullyCharge: {
+            data_type: "interpolated",
+            start_value: 120,
+            end_value: 0,
+            steps: 120,
+            noise_level: 1,
+          },
+          EstimatedRange: {
+            data_type: "interpolated",
+            start_value: 300,
+            end_value: 0,
+            steps: 300,
+            noise_level: 1,
+          },
+          BatteryLevel: {
+            data_type: "interpolated",
+            start_value: 100,
+            end_value: 0,
+            steps: 300,
+            noise_level: 0.1,
+          },
+          StateOfHealth: {
+            data_type: "interpolated",
+            start_value: 100.0,
+            end_value: 90.0,
+            steps: 300,
+            noise_level: 0.5,
+          },
+          Temperature: {
+            data_type: "interpolated",
+            start_value: 25.0,
+            end_value: 90.0,
+            steps: 300,
+            noise_level: 0.5,
+          },
+        },
+      },
+      Speed: {
+        frequency: 200,
+        signals: {
+          Value: {
+            data_type: "interpolated",
+            start_value: 0.0,
+            end_value: 120.0,
+            steps: 40,
+            noise_level: 0.2,
+          },
+        },
+      },
+      Tires: {
+        frequency: 5000,
+        signals: {
+          FrontTire: {
+            IsPressureLow: {
+              data_type: "static",
+              data_bool: [false],
+            },
+            Pressure: {
+              data_type: "interpolated",
+              start_value: 30,
+              end_value: 35,
+              steps: 50,
+              noise_level: 0.5,
+            },
+            Temperature: {
+              data_type: "interpolated",
+              start_value: 20.0,
+              end_value: 50.0,
+              steps: 50,
+              noise_level: 1.0,
+            },
+          },
+          RearTire: {
+            IsPressureLow: {
+              data_type: "static",
+              data_bool: [false, false, false, true, true, true],
+            },
+            Pressure: {
+              data_type: "interpolated",
+              start_value: 30,
+              end_value: 35,
+              steps: 50,
+              noise_level: 0.5,
+            },
+            Temperature: {
+              data_type: "interpolated",
+              start_value: 20.0,
+              end_value: 50.0,
+              steps: 50,
+              noise_level: 1.0,
+            },
+          },
+        },
+      },
+      TripData: {
+        frequency: 10000,
+        signals: {
+          StartTime: {
+            data_type: "static",
+            data: [0.0],
+          },
+          TraveledDistance: {
+            data_type: "interpolated",
+            start_value: 0.0,
+            end_value: 1000.0,
+            steps: 1000,
+            noise_level: 10.0,
+          },
+          TraveledDistanceSinceStart: {
+            data_type: "interpolated",
+            start_value: 0.0,
+            end_value: 400.0,
+            steps: 400,
+            noise_level: 10.0,
+          },
+          TripDuration: {
+            data_type: "interpolated",
+            start_value: 0.0,
+            end_value: 3600.0,
+            steps: 3600,
+            noise_level: 5.0,
+          },
+          TripMeterReading: {
+            data_type: "interpolated",
+            start_value: 0.0,
+            end_value: 100000.0,
+            steps: 100000,
+            noise_level: 50.0,
+          },
+          AverageSpeed: {
+            data_type: "interpolated",
+            start_value: 0.0,
+            end_value: 80.0,
+            steps: 80,
+            noise_level: 2.0,
+          },
+        },
+      },
+      CurrentLocation: {
+        frequency: 5000,
+        signals: {
+          Altitude: {
+            data_type: "interpolated",
+            start_value: 100.0,
+            end_value: 500.0,
+            steps: 50,
+            noise_level: 0.05,
+          },
+          Latitude: {
+            data_type: "interpolated",
+            start_value: 50.733522,
+            end_value: 50.735966,
+            steps: 100,
+            noise_level: 0.0001,
+          },
+          Longitude: {
+            data_type: "interpolated",
+            start_value: 7.101116,
+            end_value: 7.105858,
+            steps: 100,
+            noise_level: 0.0001,
+          },
+        },
+      },
+    },
+  },
+}

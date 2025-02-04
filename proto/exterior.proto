@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package intra.exterior;
+
+message Exterior {
+    float air_temperature = 1;
+    float humidity = 2;
+    float light_intensity = 3;
+}

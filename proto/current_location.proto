@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package intra.current_location;
+
+message CurrentLocation {
+    double altitude = 1;
+    double latitude = 2;
+    double longitude = 3;
+    string timestamp = 4;
+}

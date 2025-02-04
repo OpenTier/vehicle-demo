@@ -1,0 +1,51 @@
+{
+  zenoh_endpoints: ["tcp/127.0.0.1:7447"],
+  vehicle_id: "VEHICLE1VIN",
+  events: [
+    {
+      name: "Battery",
+      topic: "vehicle/battery",
+      frequency: 1000, // in milliseconds
+    },
+    {
+      name: "Speed",
+      topic: "vehicle/speed",
+      frequency: 500,
+    },
+    {
+      name: "CurrentLocation",
+      topic: "vehicle/location",
+      frequency: 1000,
+    },
+    {
+      name: "Exterior",
+      topic: "vehicle/exterior",
+      frequency: 2000,
+    },
+    {
+      name: "Tires",
+      topic: "vehicle/tires",
+      frequency: 1000,
+    },
+    {
+      name: "SystemState",
+      topic: "vehicle/system_state",
+      frequency: 5000,
+    },
+    {
+      name: "TripData",
+      topic: "vehicle/trip_data",
+      frequency: 1000,
+    },
+  ],
+  commands: [
+    {
+      name: "LockUnlock",
+      topic: "cloud/command/VEHICLE1VIN/lock",
+    },
+    {
+      name: "TurnOnOff",
+      topic: "cloud/command/VEHICLE1VIN/turn_on_ff",
+    },
+  ],
+}

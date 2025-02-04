@@ -1,0 +1,13 @@
+
+syntax = "proto3";
+
+package intra.trip_data;
+
+message TripData {
+  float traveled_distance = 1;
+  float traveled_distance_since_start = 2;
+  float trip_duration = 3;
+  float trip_meter_reading = 4;
+  float average_speed = 5;
+  string start_time = 6;
+}

@@ -1,0 +1,61 @@
+
+import { Dashboard } from "pages/dashboard.slint";
+import { LockScreen } from "pages/lock_screen.slint";
+import { Theme } from "theme.slint";
+
+import { TimeDateAdapter } from "components/ambient_temperature.slint";
+import { StateAdapter } from "components/state_adapter.slint";
+import { AmbientTemperatureAdapter } from "components/ambient_temperature.slint";
+import { BatteryGaugeAdapter } from "components/battery_status.slint";
+import { ConnectivityStatusAdapter } from "components/connectivity_status.slint";
+import { SpeedometerAdapter } from "components/speedometer.slint";
+import { TripDataAdapter } from "components/right_widget.slint";
+import { TellTalesAdapter } from "components/telltales.slint";
+import { CourrierNotificationsAdpater } from "components/left_widget.slint";
+import { Button } from "std-widgets.slint";
+
+export { TimeDateAdapter, StateAdapter, AmbientTemperatureAdapter, BatteryGaugeAdapter, ConnectivityStatusAdapter, SpeedometerAdapter, TripDataAdapter, TellTalesAdapter, CourrierNotificationsAdpater }
+
+export component MainWindow inherits Window {
+    in property <bool> isLocked <=> StateAdapter.isLocked;
+    // private property <bool> isLocked: true;
+    height: 600px;
+    width: 1024px;
+    
+    title: "Vehicle Dashboard";
+    default-font-family: "Orbitron";
+    no-frame: true;
+
+    Image {
+        source: @image-url("components/assets/background_color_fill.svg");
+    }
+
+    Dashboard {
+        unlocked: !isLocked;
+    }
+
+    LockScreen {
+        locked: isLocked;
+    }
+
+    // HorizontalLayout {
+    //     vertical-stretch: 0;
+    //     Button {
+    //         height: 20px;
+    //         width: 40px;
+    //         text: "Lock";
+    //         clicked => {
+    //             isLocked = true;
+    //         }
+    //     }
+
+    //     Button {
+    //         height: 20px;
+    //         width: 40px;
+    //         text: "Unlock";
+    //         clicked => {
+    //             isLocked = false;
+    //         }
+    //     }
+    // }
+}

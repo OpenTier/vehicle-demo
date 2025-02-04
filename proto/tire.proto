@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package intra.tire;
+
+message TirePressure {
+  bool is_pressure_low = 1;
+  uint32 pressure = 2;
+  float temperature = 3;
+}
+
+message Tires {
+  TirePressure front_tire = 1;
+  TirePressure rear_tire = 2;
+}

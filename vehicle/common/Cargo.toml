@@ -1,0 +1,21 @@
+[package]
+# this is just a temporary name to see what code we can share between modules and apps
+name = "common"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+tokio = { workspace = true, features = ["full"] }
+zenoh = { workspace = true, default-features = true }
+clap = { workspace = true }
+log = { workspace = true }
+env_logger = { workspace = true }
+prost = { workspace = true }
+prost-types = { workspace = true }
+chrono = { workspace = true }
+async-trait = { workspace = true }
+# Workspace dependencies
+vehicle_msgs = { path = "../vehicle_msgs" }

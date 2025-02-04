@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package intra.battery;
+
+message BatteryData {
+    bool is_charging = 1;
+    bool is_discharging = 2;
+    uint32 time_to_fully_charge = 3;
+    uint32 estimated_range = 4;
+    float battery_level = 5;
+    float state_of_health = 6;
+    float temperature = 7;
+}

@@ -1,0 +1,316 @@
+{
+  acceleration: {
+    lateral: 0.5,
+    longitudinal: 1.2,
+    vertical: 0.0,
+  },
+  angular_velocity: {
+    pitch: 0.1,
+    roll: 0.2,
+    yaw: 0.05,
+  },
+  average_speed: 25.0, // in km/h
+  body: {
+    horn: {
+      is_active: false,
+    },
+    lights: {
+      beam: {
+        high: {
+          is_defect: false,
+          is_on: false,
+        },
+        low: {
+          is_defect: false,
+          is_on: true,
+        },
+      },
+      brake: {
+        is_active: "true",
+        is_defect: false,
+      },
+      direction_indicator: {
+        left: {
+          is_defect: false,
+          is_signaling: false,
+        },
+        right: {
+          is_defect: false,
+          is_signaling: true,
+        },
+      },
+      hazard: {
+        is_defect: false,
+        is_signaling: false,
+      },
+      is_high_beam_switch_on: false,
+      license_plate: {
+        is_defect: false,
+        is_on: true,
+      },
+      light_switch: "Auto", // Added this line
+      parking: {
+        is_defect: false,
+        is_on: false,
+      },
+      running: {
+        is_defect: false,
+        is_on: true,
+      },
+    },
+    trunk: {
+      rear: {
+        is_light_on: false,
+        is_locked: true,
+        is_open: false,
+      },
+    },
+  },
+  chassis: {
+    accelerator: {
+      pedal_position: 70, // in percentage
+    },
+    axle: {
+      row1: {
+        axle_width: 1200, // in millimeters
+        steering_angle: 5.0,
+        tire_aspect_ratio: 60,
+        tire_diameter: 0.5,
+        tire_width: 20,
+        track_width: 1000, // in millimeters
+        tread_width: 200, // in millimeters
+        wheel: {
+          left: {
+            angular_speed: 300.0,
+            brake: {
+              fluid_level: 80,
+              is_brakes_worn: false,
+              is_fluid_level_low: false,
+              pad_wear: 15,
+            },
+            speed: 25.0,
+            tire: {
+              is_pressure_low: false,
+              pressure: 32, // PSI
+              temperature: 45.0, // in Celsius
+            },
+          },
+        },
+        wheel_diameter: 0.5,
+        wheel_width: 0.1,
+      },
+      // Added `row2` for rear axle data
+      row2: {
+        axle_width: 1200, // in millimeters
+        steering_angle: 0.0, // Rear axle typically doesn't steer
+        tire_aspect_ratio: 60,
+        tire_diameter: 0.5,
+        tire_width: 20,
+        track_width: 1000, // in millimeters
+        tread_width: 200, // in millimeters
+        wheel: {
+          left: {
+            angular_speed: 280.0, // Slightly different from front wheel
+            brake: {
+              fluid_level: 80,
+              is_brakes_worn: false,
+              is_fluid_level_low: false,
+              pad_wear: 15,
+            },
+            speed: 23.0,
+            tire: {
+              is_pressure_low: false,
+              pressure: 30, // PSI, slightly different from front tire
+              temperature: 43.0, // in Celsius
+            },
+          },
+        },
+        wheel_diameter: 0.5,
+        wheel_width: 0.1,
+      },
+    },
+    brake: {
+      is_driver_emergency_braking_detected: false,
+      pedal_position: 50,
+    },
+    steering_wheel: {
+      angle: 15,
+      extension: 2,
+      heating_cooling: 0,
+      tilt: 10,
+    },
+    wheelbase: 1500, // in millimeters
+  },
+  curb_weight: 1500, // in kg
+  current_location: {
+    altitude: 100.5,
+    gnss_receiver: {
+      fix_type: "3D",
+      mounting_position: {
+        x: 1,
+        y: 2,
+        z: 1,
+      },
+    },
+    heading: 150.0,
+    horizontal_accuracy: 2.0,
+    latitude: 51.509865,
+    longitude: -0.118092,
+    timestamp: "2024-09-27T10:45:00Z",
+    vertical_accuracy: 1.5,
+  },
+  current_overall_weight: 1600, // in kg
+  diagnostics: {
+    dtc_count: 0,
+    dtc_list: [],
+  },
+  exterior: {
+    air_temperature: 25.0, // in Celsius
+    humidity: 60.0, // in percentage
+    light_intensity: 500.0, // in lux
+  },
+  is_broken_down: false,
+  is_moving: true,
+  low_voltage_battery: {
+    current_current: 15.0, // in amps
+    current_voltage: 48.0, // in volts
+    nominal_capacity: 2000, // in mAh
+    nominal_voltage: 48,
+  },
+  low_voltage_system_state: "Normal",
+  powertrain: {
+    accumulated_braking_energy: 120.5, // in kWh
+    electric_motor: {
+      coolant_temperature: 45, // in Celsius
+      engine_code: "EM1234",
+      engine_coolant: {
+        capacity: 1.5, // in liters
+        level: "Full",
+        life_remaining: 80, // in percentage
+        temperature: 50.0, // in Celsius
+      },
+      max_power: 3000, // in watts
+      max_regen_power: 200,
+      max_regen_torque: 50,
+      max_torque: 60,
+      power: 2500,
+      speed: 80, // in rpm
+      temperature: 40,
+      time_in_use: 5.5, // in hours
+      torque: 55,
+    },
+    traction_battery: {
+      accumulated_charged_energy: 8000.0, // in kWh
+      accumulated_charged_throughput: 4000.0,
+      accumulated_consumed_energy: 7600.0,
+      accumulated_consumed_throughput: 3800.0,
+      current_current: 50.0,
+      current_power: 2400.0,
+      current_voltage: 48.0,
+      error_codes: [],
+      gross_capacity: 12000, // in mAh
+      id: "TB-1234",
+      is_ground_connected: true,
+      is_power_connected: true,
+      max_voltage: 54,
+      net_capacity: 10000,
+      nominal_voltage: 48,
+      power_loss: 100.0,
+      production_date: "2024-01-01",
+      range: 80, // in kilometers
+      state_of_charge: {
+        current: 85.0, // in percentage
+        current_energy: 4000.0,
+        displayed: 85.0,
+      },
+      state_of_health: 95.0, // in percentage
+      temperature: {
+        average: 40.0,
+        cell_temperature: [39.5, 40.0, 40.2],
+        max: 40.2,
+        min: 39.5,
+      },
+      time_remaining: 120, // in minutes
+      // Added `charging` field below
+      charging: {
+        is_charging: true,
+        is_discharging: false,
+        time_to_complete: 60, // in minutes
+        // Additional fields if needed
+        average_power: 2200.0, // in watts
+        charge_current: {
+          dc: 50.0,
+          phase1: 0.0,
+          phase2: 0.0,
+          phase3: 0.0,
+        },
+        charge_limit: 100, // in percentage
+        charge_plug_type: ["Type2"],
+        charge_port_flap: "Closed",
+        charge_port_position: ["Front Left"],
+        charge_port_type: ["AC"],
+        charge_rate: 22.0, // in kW
+        charge_voltage: {
+          dc: 480.0,
+          phase1: 0.0,
+          phase2: 0.0,
+          phase3: 0.0,
+        },
+        evse_id: "EVSE-5678",
+        is_charge_port_flap_open: false,
+        is_charging_cable_connected: true,
+        is_charging_cable_locked: true,
+        location: {
+          altitude: 100.5,
+          latitude: 51.509865,
+          longitude: -0.118092,
+        },
+        max_power: 50.0, // in kW
+        maximum_charging_current: {
+          dc: 100.0,
+          phase1: 0.0,
+          phase2: 0.0,
+          phase3: 0.0,
+        },
+        mode: "Fast Charging",
+        power_loss: 10.0, // in watts
+        start_stop_charging: "Start",
+        temperature: 35.0, // in Celsius
+        timer: {
+          mode: "Scheduled",
+          time: "2024-09-28T08:00:00Z",
+        },
+      },
+    },
+  },
+  speed: 25.0, // in km/h
+  start_time: "2024-09-27T08:00:00Z",
+  traveled_distance: 45.0, // in kilometers
+  traveled_distance_since_start: 15.0, // in kilometers
+  trip_duration: 30.0, // in minutes
+  trip_meter_reading: 60.0, // in kilometers
+  turning_diameter: 2000, // in millimeters
+  vehicle_identification: {
+    acriss_code: "L1",
+    body_type: "Scooter",
+    brand: "Obyan",
+    date_vehicle_first_registered: "2024-01-01",
+    known_vehicle_damages: "None",
+    license_plate: "E1234",
+    meets_emission_standard: "EURO 5",
+    model: "Pro-1000",
+    optional_extras: ["GPS", "Extended Battery"],
+    production_date: "2024-01-01",
+    purchase_date: "2024-01-10",
+    vin: "VIN1234567890",
+    vehicle_configuration: "Standard",
+    vehicle_exterior_color: "Black",
+    vehicle_interior_color: "None",
+    vehicle_interior_type: "None",
+    vehicle_model_date: "2024",
+    vehicle_seating_capacity: 1,
+    vehicle_special_usage: "None",
+    wmi: "WMI1234",
+    year: 2024,
+  },
+}

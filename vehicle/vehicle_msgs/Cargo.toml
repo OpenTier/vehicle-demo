@@ -1,0 +1,13 @@
+[package]
+name = "vehicle_msgs"
+edition = "2021"
+version = "0.0.1"
+build = "build.rs"
+
+[dependencies]
+prost = { workspace = true }
+prost-types = { workspace = true }
+serde = { workspace = true }
+
+[build-dependencies]
+prost-build = { workspace = true }
