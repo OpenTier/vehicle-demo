@@ -8,6 +8,3 @@ twin_service --twin-config /app/twin_config.json5 --vehicle-state-config /app/ve
 
 # Run signal mocker service
 signal_mocker_service --config /app/mock_data.json5 &
-
-# Run dashboard
-SLINT_BACKEND=Qt dashboard

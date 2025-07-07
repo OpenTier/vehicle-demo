@@ -1,11 +1,11 @@
-# Scooter Demo
+# Vehicle Demo
 
-This is a demo of Scooter embedded software, consisting of various services that can be run on a local machine or Raspberry Pi. It includes services for telemetry, remote control, dashboard HMI, and a service for mocking the data that comes from various scooter peripherals.
+This is a demo of Vehicle embedded software, consisting of various services that can be run on a local machine or Raspberry Pi. It includes services for telemetry, remote control, dashboard HMI, and a service for mocking the data that comes from various vehicle peripherals.
 
 ## Directories and Files
 
 - **docker/**: Contains Docker-related files for building and running the services.
-    - **vehicle/**: Contains Dockerfile and run script for the whole Scooter services.
+    - **vehicle/**: Contains Dockerfile and run script for the whole Vehicle services.
     - **cross/rpi/**: Contains Dockerfile for cross-compiling code to Raspberry Pi.
 - **proto/**: Contains Protocol Buffers (proto) definitions for various vehicle signals and states.
 - **vehicle/**: Contains the source code for various vehicle-related services.
