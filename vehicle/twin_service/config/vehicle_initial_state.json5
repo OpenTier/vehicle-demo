@@ -293,7 +293,7 @@
   vehicle_identification: {
     acriss_code: "L1",
     body_type: "Vehicle",
-    brand: "Obyan",
+    brand: "Torvix",
     date_vehicle_first_registered: "2024-01-01",
     known_vehicle_damages: "None",
     license_plate: "E1234",
