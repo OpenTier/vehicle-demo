@@ -292,8 +292,8 @@
   turning_diameter: 2000, // in millimeters
   vehicle_identification: {
     acriss_code: "L1",
-    body_type: "Scooter",
-    brand: "Obyan",
+    body_type: "Vehicle",
+    brand: "Torvix",
     date_vehicle_first_registered: "2024-01-01",
     known_vehicle_damages: "None",
     license_plate: "E1234",

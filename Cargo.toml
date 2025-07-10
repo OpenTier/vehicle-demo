@@ -3,7 +3,6 @@ resolver = "2"
 members = [
     "vehicle/twin_service",
     "vehicle/update_client",
-    "vehicle/dashboard",
     "vehicle/vehicle_msgs",
     "vehicle/signal_mocker_service",
 ]
@@ -21,8 +20,6 @@ env_logger = { version = "0.11.5" }
 prost = "0.13.2"
 prost-types = "0.13.2"
 prost-build = "0.13.2"
-slint = "1.7.2"
-slint-build = "1.7.2"
 chrono = "0.4.38"
 async-trait = "0.1.82"
 json5 = "0.4.1"

@@ -54,7 +54,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y \
 
 # copy the built binary to the new image
 COPY --from=builder /app/target/release/update_client /usr/local/bin/
-COPY --from=builder /app/target/release/dashboard /usr/local/bin/
 COPY --from=builder /app/target/release/twin_service /usr/local/bin/
 COPY --from=builder /app/target/release/signal_mocker_service /usr/local/bin/
 # copy configurations
