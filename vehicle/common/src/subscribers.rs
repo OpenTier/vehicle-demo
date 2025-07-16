@@ -1,4 +1,4 @@
-// This code was developed by OPENTIER - FZCO.
+// This code was developed by OpenTier GmbH.
 use log::error;
 use prost::Message;
 use std::sync::Arc;

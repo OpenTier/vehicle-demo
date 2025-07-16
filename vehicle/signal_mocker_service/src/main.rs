@@ -1,4 +1,4 @@
-// This code was developed by OPENTIER - FZCO.
+// This code was developed by OpenTier GmbH.
 use clap::Parser;
 use common::topics::*;
 use env_logger;

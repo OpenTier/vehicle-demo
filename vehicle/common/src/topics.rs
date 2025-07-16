@@ -1,4 +1,4 @@
-// This code was developed by OPENTIER - FZCO.
+// This code was developed by OpenTier GmbH.
 pub const SPEED_TOPIC: &str = "speed";
 pub const EXTERIOR_TOPIC: &str = "exterior";
 pub const CURRENT_LOCATION_TOPIC: &str = "location";

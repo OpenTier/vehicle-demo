@@ -1,4 +1,4 @@
-// This code was developed by OPENTIER - FZCO.
+// This code was developed by OpenTier GmbH.
 use crate::config::*;
 use rand::Rng;
 use std::collections::HashMap;

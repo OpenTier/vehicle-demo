@@ -1,42 +1,41 @@
 # Vehicle Demo
 
-This is a demo of Vehicle embedded software, consisting of various services that can be run on a local machine or Raspberry Pi. It includes services for telemetry, remote control, and a service for mocking the data that comes from various vehicle peripherals.
+This repository contains example services that demonstrate a small vehicle software stack. The services communicate over Zenoh and can run on a local development machine or on a Raspberry Pi.
 
-## Directories and Files
+## Directory overview
 
-- **docker/**: Contains Docker-related files for building and running the services.
-    - **vehicle/**: Contains Dockerfile and run script for the whole Vehicle services.
-    - **cross/rpi/**: Contains Dockerfile for cross-compiling code to Raspberry Pi.
-- **proto/**: Contains Protocol Buffers (proto) definitions for various vehicle signals and states.
-- **vehicle/**: Contains the source code for various vehicle-related services.
-    - **common/**: Common utilities and modules.
-    - **signal_mocker_service/**: Service for mocking vehicle signals.
-    - **twin_service/**: Twin service for managing vehicle state.
-    - **update_client/**: Client for updating vehicle software.
-    - **vehicle_msgs/**: Definitions for vehicle messages.
-- **vehicle-cloud-api/**: Contains API definitions and specifications for vehicle-cloud interactions.
+- **docker/** - Dockerfiles and helper scripts.
+- **proto/** - Protocol Buffer definitions for vehicle signals and states.
+- **vehicle/** - Source code for the individual services.
+    - **common/** - Shared helpers used by the other services.
+    - **signal_mocker_service/** - Generates mock telemetry signals.
+    - **twin_service/** - Manages vehicle state and persists updates.
+    - **update_client/** - Simple client for over-the-air updates.
+    - **vehicle_msgs/** - Generated Rust types from `proto/`.
+- **vehicle-cloud-api/** - API definitions for cloud interactions.
 
-## Getting Started
+## Getting started
 
-### Prerequisites
+1. Fetch submodules and dependencies
 
-- Rust programming language
-- Docker
-- Protocol Buffers compiler (protoc)
-
-### Building the Project
-First, initialize and update the git submodules:
 ```sh
 git submodule update --init --recursive
 ```
 
-Then build the Docker image:
+2. Build the container image
+
 ```sh
 docker build -f docker/vehicle/Dockerfile -t vehicle-demo .
 ```
 
-### Running the Project
-Run the Docker container:
+3. Run the services
+
 ```sh
 docker run --rm -it vehicle-demo
 ```
+
+You can also build the workspace directly using Cargo if the required Rust toolchain and dependencies are installed.
+
+## License
+
+This project is licensed under the Mozilla Public License 2.0. See the [LICENSE](LICENSE) file for details.

@@ -1,4 +1,4 @@
-// This code was developed by OPENTIER - FZCO.
+// This code was developed by OpenTier GmbH.
 pub mod publishers;
 pub mod subscribers;
 pub mod topics;

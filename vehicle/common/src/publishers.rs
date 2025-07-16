@@ -1,4 +1,4 @@
-// This code was developed by OPENTIER - FZCO.
+// This code was developed by OpenTier GmbH.
 use async_trait::async_trait;
 use prost::Message;
 use std::sync::Arc;

@@ -1,4 +1,4 @@
-// This code was developed by OPENTIER - FZCO.
+// This code was developed by OpenTier GmbH.
 use crate::generators::MessageGenerator;
 use common::publishers::{DataPublisher, ZenohPublisher};
 use log::error;
